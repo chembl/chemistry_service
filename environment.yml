@@ -1,14 +1,18 @@
 name: eTransafeEnv
+channel_priority: strict
 channels:
   - conda-forge
   - anaconda
   - defaults
 dependencies:
-  - django
-  - djangorestframework
-  - drf-yasg
-  - chembl_structure_pipeline
-  - python-keycloak
-  - mysql-connector-c
-  - mysqlclient
-  - pip
+  - django=3.1.2
+  - djangorestframework=3.12.2
+  - drf-yasg=1.20.0
+  - chembl_structure_pipeline=1.0.0
+  - python-keycloak=0.19.0
+  - mysql-connector-c=6.1.11
+  - mysqlclient=2.0.3
+  - pip=20.2.4
+
+  - pip:
+    - python-decouple=3.8
