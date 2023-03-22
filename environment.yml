@@ -1,0 +1,14 @@
+name: eTransafeEnv
+channels:
+  - conda-forge
+  - anaconda
+  - defaults
+dependencies:
+  - django
+  - djangorestframework
+  - drf-yasg
+  - chembl_structure_pipeline
+  - python-keycloak
+  - mysql-connector-c
+  - mysqlclient
+  - pip
