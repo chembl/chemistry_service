@@ -28,7 +28,7 @@ SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-INITIAL_ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+INITIAL_ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0']
 # Application definition
 ALLOWED_HOSTS = INITIAL_ALLOWED_HOSTS if "ADDITIONAL_ALLOWED_HOSTS" not in os.environ else list(set(INITIAL_ALLOWED_HOSTS + os.environ.get("ADDITIONAL_ALLOWED_HOSTS").split(' ')))
 if "ADDITIONAL_ALLOWED_HOSTS" in os.environ:

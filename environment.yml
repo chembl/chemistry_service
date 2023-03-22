@@ -1,5 +1,4 @@
 name: eTransafeEnv
-channel_priority: strict
 channels:
   - conda-forge
   - anaconda
@@ -15,4 +14,4 @@ dependencies:
   - pip=20.2.4
 
   - pip:
-    - python-decouple=3.8
+    - python-decouple==3.8

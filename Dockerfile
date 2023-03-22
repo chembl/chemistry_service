@@ -7,6 +7,7 @@ COPY . /usr/src/app/
 RUN apt-get --allow-releaseinfo-change update
 RUN apt-get install -y curl
 COPY environment.yml .
+RUN conda config --set channel_priority strict
 RUN conda env create -f environment.yml
 
 # Make RUN commands use the new environment:
@@ -23,5 +24,6 @@ RUN python -c "import rdkit"
 RUN python -c "import drf_spectacular"
 ENV PYTHONUNBUFFERED=1
 
+SHELL ["conda", "run", "--no-capture-output", "-n", "myenv", "/bin/bash", "-c"]
 EXPOSE 8000
-ENTRYPOINT ["python", "manage.py", "runserver", "0.0.0.0:8000", "--settings=chemistry_services_project.settings.local"]
+ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "eTransafeEnv", "python", "manage.py",  "runserver", "0.0.0.0:8000", "--settings=chemistry_services_project.settings.local"]
