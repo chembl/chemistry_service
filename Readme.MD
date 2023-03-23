@@ -6,7 +6,7 @@ More details about **chembl_structure pipeline library**:
 - [wiki](https://github.com/chembl/ChEMBL_Structure_Pipeline/wiki)
 - [publication](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-020-00456-1)
 
-## REQUIREMENTS
+## Requirements
 - Docker
 - A MySQL instance of the ChEMBL database. ChEMBL can be freely [downloaded](https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/latest/).
 
@@ -34,6 +34,8 @@ docker-compose up --build
 - Visit the api schema from: [http://localhost:8000/v1/api](http://localhost:8000/v1/api)
 ___
 
-## FUNDING
+## Usage
+
+## Funding
 This project has received funding from the Innovative Medicines Initiative 2 Joint Undertaking under grant
 agreement No 777365 (“eTRANSAFE”)
