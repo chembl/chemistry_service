@@ -31,7 +31,7 @@ To improve the performance of the chemistry service, it is advised to create ful
 docker-compose up --build
 ```
 ### Step 5:
-- Visit the api schema from: [http://localhost:8000/v1/api](http://localhost:8000/v1/api/)
+- Visit the api schema from: [http://localhost:8000/v1/api](http://localhost:8000/v1/api)
 ___
 
 ## FUNDING
