@@ -23,5 +23,9 @@ SECRET_KEY = 'n$i7dgz-qci*!fpecgbt9z$2onadzsl#za%!SDF_SADF_A3d'
 docker-compose up --build
 ```
 ### Ste 4:
-- Visit the api schema from: [http://localhost:8000/v1/api](http://localhost:8000/api/)
+- Visit the api schema from: [http://localhost:8000/v1/api](http://localhost:8000/v1/api/)
 ___
+
+## FUNDING
+This project has received funding from the Innovative Medicines Initiative 2 Joint Undertaking under grant
+agreement No 777365 (“eTRANSAFE”)
