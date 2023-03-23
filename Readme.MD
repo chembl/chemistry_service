@@ -8,21 +8,20 @@ More details about **chembl_structure pipeline library**:
 ## DATABASE SETTINGS
 A chembl database required to run chemistry services. Update 'chemistry_services/settings/local.py' for database settings.
 
-## Local Installation
-
-### STEP 1:
+## Local Installation Steps:
+___
+### Step 1:
 ```python
 # Create .env file in the same folder with manage.py and put the line below:
 # (Note that you can set any value)
 SECRET_KEY = 'n$i7dgz-qci*!fpecgbt9z$2onadzsl#za%!SDF_SADF_A3d'
 ```
-
-### STEP 2:
-- Update the contents of `chemistry_services_project/settings/local.py` with your chembl mysql database credentials.  
-
+### Step 2:
+- Update the contents of `chemistry_services_project/settings/local.py` with your chembl mysql database credentials.
 ### Step 3:
 ```bash
 docker-compose up --build
 ```
-
-### STEP 4 Visit the api schema from: [http://localhost:8000/v1/api](http://localhost:8000/api/)
+### Ste 4:
+- Visit the api schema from: [http://localhost:8000/v1/api](http://localhost:8000/api/)
+___
