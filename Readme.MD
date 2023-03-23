@@ -1,5 +1,12 @@
 # eTransafe Chemistry Services
-The chemistry service is a Django based web service wrapper for delivering compound identification functionalities. It is based on the ChEMBL database and the chembl_structure_pipeline (which is a set of ChEMBL protocols used to standardise and salt strip molecules - first used in ChEMBL 26). It was developed at the European Bioinformatic Institute as part of the eTransafe project. 
+The chemistry service is a Django based web service wrapper for delivering compound identification functionalities. It is based on the ChEMBL database and the chembl_structure_pipeline (which is a set of ChEMBL protocols used to standardise and salt strip molecules - first used in ChEMBL 26). It was developed at the European Bioinformatic Institute as part of the eTransafe project.
+
+The chemistry service offer the following funtionalities:
+- compound name to compound structure conversion
+- compound structure to compound name conversion
+- compound structure standardisation
+- compound structure checker
+- get parent compound
 
 More details about **chembl_structure pipeline library**: 
 - [source_code](https://github.com/chembl/ChEMBL_Structure_Pipeline.git)
