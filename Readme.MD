@@ -1,9 +1,10 @@
 # eTransafe Chemistry Services
-Django based web service wrapper for chembl_structure_pipeline(which is a set of ChEMBL protocols used to standardise and salt strip molecules. First used in ChEMBL 26.)
+The chemistry service is a Django based web service wrapper for delivering compound identification functionalities. It is based on the ChEMBL database and the chembl_structure_pipeline (which is a set of ChEMBL protocols used to standardise and salt strip molecules - first used in ChEMBL 26). It was developed at the European Bioinformatic Institute as part of the eTransafe project. 
 
 More details about **chembl_structure pipeline library**: 
 - [source_code](https://github.com/chembl/ChEMBL_Structure_Pipeline.git)
-- [wiki](https://github.com/chembl/ChEMBL_Structure_Pipeline/wiki) 
+- [wiki](https://github.com/chembl/ChEMBL_Structure_Pipeline/wiki)
+- [publication](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-020-00456-1)
 
 ## REQUIREMENTS
 - Docker
@@ -13,15 +14,15 @@ More details about **chembl_structure pipeline library**:
 ## Local Installation Steps:
 ___
 ### Step 1:
+Create .env file in the same folder with manage.py and put the line below:
 ```python
-# Create .env file in the same folder with manage.py and put the line below:
 # (Note that you can set any value)
 SECRET_KEY = 'n$i7dgz-qci*!fpecgbt9z$2onadzsl#za%!SDF_SADF_A3d'
 ```
 ### Step 2:
-- Update the contents of `chemistry_services_project/settings/local.py` with your chembl mysql database credentials.
+Update the contents of `chemistry_services_project/settings/local.py` with your ChEMBL mysql database credentials.
 ### Step 3:
-- To improve the performance of the chemistry service, it is advised to create full indexes on `pref_name` and `synonyms` in your ChEMBL database
+To improve the performance of the chemistry service, it is advised to create full indexes on `pref_name` and `synonyms` in your ChEMBL database
 ```sql
 "ALTER TABLE molecule_dictionary ADD FULLTEXT (pref_name); ALTER TABLE molecule_synonyms ADD FULLTEXT (synonyms);"
 ```
@@ -29,7 +30,7 @@ SECRET_KEY = 'n$i7dgz-qci*!fpecgbt9z$2onadzsl#za%!SDF_SADF_A3d'
 ```bash
 docker-compose up --build
 ```
-### Ste 5:
+### Step 5:
 - Visit the api schema from: [http://localhost:8000/v1/api](http://localhost:8000/v1/api/)
 ___
 
