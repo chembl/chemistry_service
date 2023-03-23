@@ -1,5 +1,4 @@
 # eTransafe Chemistry Services
-
 Django based web service wrapper for chembl_structure_pipeline(which is a set of ChEMBL protocols used to standardise and salt strip molecules. First used in ChEMBL 26.)
 
 More details about **chembl_structure pipeline library**: 
@@ -11,12 +10,19 @@ A chembl database required to run chemistry services. Update 'chemistry_services
 
 ## Local Installation
 
-With docker:
-```bash
-docker-compose up
+### STEP 1:
+```python
+# Create .env file in the same folder with manage.py and put the line below:
+# (Note that you can set any value)
+SECRET_KEY = 'n$i7dgz-qci*!fpecgbt9z$2onadzsl#za%!SDF_SADF_A3d'
 ```
 
-## Usage
-1) First run application with docker-compose up. For development environment docker-compose -f docker-compose-dev.yml
-   
-2) Visit the api schema from: [http://localhost:8000/v1/api](http://localhost:8000/api/)
+### STEP 2:
+- Update the contents of `chemistry_services_project/settings/local.py` with your chembl mysql database credentials.  
+
+### Step 3:
+```bash
+docker-compose up --build
+```
+
+### STEP 4 Visit the api schema from: [http://localhost:8000/v1/api](http://localhost:8000/api/)
